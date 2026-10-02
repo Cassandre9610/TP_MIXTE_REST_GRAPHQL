@@ -1,0 +1,14 @@
+type Booking {
+    userid: String!
+    dates: [Schedule]
+}
+
+type Schedule {
+    date: String!
+    movies: [String]
+}
+
+type Query {
+    booking_with_userid(_userid:String!): Booking
+}
+
