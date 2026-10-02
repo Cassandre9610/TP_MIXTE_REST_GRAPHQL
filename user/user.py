@@ -1,16 +1,16 @@
 # REST API
 from flask import Flask, render_template, request, jsonify, make_response
-import requests
+# import requests
 import json
 from werkzeug.exceptions import NotFound
 
 # CALLING gRPC requests
 import grpc
 from concurrent import futures
-import booking_pb2
-import booking_pb2_grpc
-import movie_pb2
-import movie_pb2_grpc
+# import booking_pb2
+# import booking_pb2_grpc
+# import movie_pb2
+# import movie_pb2_grpc
 
 # CALLING GraphQL requests
 # todo to complete
@@ -24,7 +24,7 @@ with open('{}/data/users.json'.format("."), "r") as jsf:
    users = json.load(jsf)["users"]
 
 def write(new_users):
-   with open('{}/databases/users.json'.format("."), 'w') as f:
+   with open('{}/data/users.json'.format("."), 'w') as f:
       full = {}
       full['users']=users
       json.dump(full, f)
